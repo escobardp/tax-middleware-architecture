@@ -46,12 +46,12 @@ flowchart LR
         VL["Validation Layer"]
         LOG["Logging & Monitoring"]
         ERR["Error Handling"]
+    end
+
     subgraph Country_Adapters
         AR["Adapter Argentina"]
         UY["Adapter Uruguay"]
-        MX["Adapter Mexixo"]
-    end
-
+        MX["Adapter Mexico"]
     end
 
     subgraph Tax_Authorities
