@@ -83,6 +83,12 @@ flowchart LR
     MW --> LOG
     MW --> ERR
 ```
+## Country Flows
+
+- AR Argentina (AFIP): [Ver flujo](docs/argentina-flow.md)
+- UY Uruguay (DGI): Próximamente
+- MX México (SAT): Próximamente
+  
 ## Key Components
 
 - Adapter por país
