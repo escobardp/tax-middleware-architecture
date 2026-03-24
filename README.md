@@ -87,7 +87,7 @@ flowchart LR
 
 - AR Argentina (AFIP): [Ver flujo](docs/argentina-flow.md)
 - UY Uruguay (DGI): [Ver flujo](docs/uruguay-flow.md)
-- MX México (SAT): Próximamente
+- MX México (SAT): [Ver flujo](docs/mexico-flow.md)
   
 ## Key Components
 
