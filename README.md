@@ -32,9 +32,23 @@ Se propone una arquitectura de middleware con las siguientes características:
 
 ## Architecture (Conceptual)
 
-* TWC
+```mermaid
+flowchart LR
+    SAP["SAP ERP"] --> MW["Middleware Core"]
 
----
+    MW --> TR["Transformation Engine"]
+    MW --> RT["Routing Layer"]
+    MW --> VL["Validation Layer"]
+
+    TR --> AR["Adapter Argentina"]
+    TR --> UY["Adapter Uruguay"]
+
+    AR --> AFIP["AFIP - Tax Authority"]
+    UY --> DGI["DGI - Tax Authority"]
+
+    MW --> LOG["Logging & Monitoring"]
+    MW --> ERR["Error Handling"]
+```
 
 ## Key Components
 
