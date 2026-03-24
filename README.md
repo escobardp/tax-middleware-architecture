@@ -34,22 +34,55 @@ Se propone una arquitectura de middleware con las siguientes características:
 
 ```mermaid
 flowchart LR
-    SAP["SAP ERP"] --> MW["Middleware Core"]
 
-    MW --> TR["Transformation Engine"]
-    MW --> RT["Routing Layer"]
-    MW --> VL["Validation Layer"]
+    subgraph ERP
+        SAP["SAP ERP"]
+    end
 
-    TR --> AR["Adapter Argentina"]
-    TR --> UY["Adapter Uruguay"]
+    subgraph Middleware
+        MW["Middleware Core"]
+        TR["Transformation Engine"]
+        RT["Routing Layer"]
+        VL["Validation Layer"]
+        LOG["Logging & Monitoring"]
+        ERR["Error Handling"]
+    subgraph Country_Adapters
+        AR["Adapter Argentina"]
+        UY["Adapter Uruguay"]
+        MX["Adapter Mexixo"]
+    end
 
-    AR --> AFIP["AFIP - Tax Authority"]
-    UY --> DGI["DGI - Tax Authority"]
+    end
 
-    MW --> LOG["Logging & Monitoring"]
-    MW --> ERR["Error Handling"]
+    subgraph Tax_Authorities
+        AFIP["AFIP"]
+        DGI["DGI"]
+        SAT["SAT"]
+    end
+
+    subgraph Continuous_Transaction_Controls
+    URUWARE["Uruware"]
+    EDICOM["Edicom"]
+    end
+
+    SAP --> MW
+    MW --> TR
+    MW --> RT
+    MW --> VL
+
+    TR --> AR
+    TR --> UY
+    TR --> MX
+
+    AR --> AFIP
+    UY --> URUWARE
+    MX --> EDICOM
+
+    URUWARE --> DGI
+    EDICOM --> SAT
+    MW --> LOG
+    MW --> ERR
 ```
-
 ## Key Components
 
 - Adapter por país
