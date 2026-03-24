@@ -107,7 +107,12 @@ flowchart LR
 - Escalabilidad para nuevos países
 
 ---
-## 📐 Architecture Decisions
+## 🚀 Future Improvements
+
+- [Ver roadmap de evolución](docs/future-improvements.md)
+
+---
+## Architecture Decisions
 
 - [Ver decisiones de diseño](docs/design-decisions.md)
 
