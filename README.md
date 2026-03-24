@@ -107,7 +107,11 @@ flowchart LR
 - Escalabilidad para nuevos países
 
 ---
+## 📐 Architecture Decisions
 
+- [Ver decisiones de diseño](docs/design-decisions.md)
+
+---
 ## Author
 
 Daniel Escobar  
